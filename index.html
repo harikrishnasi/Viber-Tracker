@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Vibe Tracker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              m3: {
+                surface: '#FDF8F6',
+                surfaceVariant: '#F0EAE8',
+                primary: '#6750A4',
+                onPrimary: '#FFFFFF',
+                secondaryContainer: '#E8DEF8',
+                onSecondaryContainer: '#1D192B',
+                error: '#BA1A1A',
+                errorContainer: '#FFDAD6',
+                onErrorContainer: '#410002',
+                good: '#C4EED0', // Pastel Green
+                onGood: '#0F5223',
+                bad: '#474747',   // Dark Muted
+                onBad: '#F2F2F2',
+                // Dark Mode Variants
+                dark: {
+                  surface: '#121212',
+                  surfaceVariant: '#2D2D2D',
+                  primary: '#D0BCFF',
+                  goodContainer: '#0F5223', // Darker green background
+                  onGoodContainer: '#C4EED0', // Lighter green text
+                  badContainer: '#303030',
+                  onBadContainer: '#E3E3E3',
+                }
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        /* Default background set in CSS for smoothness, overridden by Tailwind classes on div if needed */
+        background-color: #FDF8F6;
+        -webkit-tap-highlight-color: transparent;
+        transition: background-color 0.3s ease;
+      }
+      .dark body {
+        background-color: #121212;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.31.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
